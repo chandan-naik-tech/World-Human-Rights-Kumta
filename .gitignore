@@ -21,8 +21,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # Database & temp uploads (keep empty dir pattern if needed)
-backend/database/*.sqlite
-backend/database/*.db
 
 # IDE & OS files
 .DS_Store
