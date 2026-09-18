@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import axios from 'axios';
 import App from './App.jsx';
 import './index.css';
 import { ThemeProvider } from './context/ThemeContext';
 import { AuthProvider } from './context/AuthContext';
+
+// Set base URL for API requests if deployed to production host (e.g. Netlify)
+if (import.meta.env.VITE_API_URL) {
+  axios.defaults.baseURL = import.meta.env.VITE_API_URL;
+}
 
 // Global error logger for frontend crashes
 window.onerror = function (message, source, lineno, colno, error) {
